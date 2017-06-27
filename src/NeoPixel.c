@@ -26,6 +26,7 @@ mraa_gpio_context NPInit(ws2811_channel_t *channel_t)
   mraa_gpio_context gpio;
 
   gpio = mraa_gpio_init(channel_t->gpionum);
+  mraa_gpio_dir(gpio, MRAA_GPIO_OUT);
   mraa_gpio_use_mmaped(gpio, 1);
   channel_t->leds = malloc(sizeof(ws2811_led_t) * channel_t->count);
   if (!channel_t->leds)

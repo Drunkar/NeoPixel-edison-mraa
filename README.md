@@ -1,7 +1,8 @@
 # NeoPixel-edison-mraa
 
 NeoPixel library for edison via mraa gpio.
-Tested only in ubilinux and WS2812.
+Tested only in ubilinux, yocto and WS2812.
+
 
 ## Dependencies
 
@@ -37,6 +38,9 @@ git clone https://github.com/Drunkar/NeoPixel-edison-mraa
 cd NeoPixel-edison-mraa/src/
 make
 cd ../examples/
+
+# wiring
+if using arduino expansion board, connect ws2812 to A1 pin
 
 # python test
 python strandtest.py
